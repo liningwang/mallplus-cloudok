@@ -1,7 +1,5 @@
 # mallcloud-platform
 
-[![License](https://img.shields.io/badge/license-Apache%202-4EB1BA.svg)]
-(https://www.apache.org/licenses/LICENSE-2.0.html)<a href='https://gitee.com/catshen/mallcloud-platform'><img src='https://gitee.com/catshen/mallcloud-platform/widgets/widget_4.svg' alt='Fork me on Gitee'></img></a><a href='https://gitee.com/catshen/mallcloud-platform/stargazers'><img src='https://gitee.com/catshen/mallcloud-platform/badge/star.svg?theme=dark' alt='star'></img></a>
 
 ## 如果您觉得有帮助，请点右上角 "Star" 支持一下谢谢
 
@@ -195,4 +193,4 @@ uni-app 是一个使用 Vue.js 开发跨平台应用的前端框架，开发者�
 
 ### 我的微信号
 
-![输入图片说明]([https://images.gitee.com/uploads/images/2020/0109/175349_ce8614db_134431.jpeg](https://images.gitee.com/uploads/images/2020/0109/175349_ce8614db_134431.jpeg) "流逝.jpeg")
+![输入图片说明](https://images.gitee.com/uploads/images/2020/0109/175504_2897c82d_134431.jpeg "流逝.jpeg")
