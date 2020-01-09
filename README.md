@@ -11,7 +11,10 @@
 
 * **技术交流群** [ 195405248 178381694 419078373]
 [文档blog]( http://yjlive.cn:8084/#/)
-* **详细在线文档** [点击查看](https://gitee.com/zscat/mallcloud-platform/wikis/%E9%A1%B9%E7%9B%AE%E9%83%A8%E7%BD%B2?sort_id=1440773)
+![输入图片说明](https://images.gitee.com/uploads/images/2020/0109/102351_cfd0b0c7_134431.png "屏幕截图.png")
+### 关注公众号获取最全部署教程和后台管理的vue前端，以及uniapp生成的h5 小程序和app
+
+
 * **演示地址**
   * url： [http://www.yjlive.cn:8090/#/login](http://www.yjlive.cn:8090/#/login)
   * 账号密码：admin/123456
