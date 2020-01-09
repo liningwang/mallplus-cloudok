@@ -193,3 +193,6 @@ uni-app 是一个使用 Vue.js 开发跨平台应用的前端框架，开发者�
 </table>
 
 
+### 我的微信号
+
+![输入图片说明]([https://images.gitee.com/uploads/images/2020/0109/175349_ce8614db_134431.jpeg](https://images.gitee.com/uploads/images/2020/0109/175349_ce8614db_134431.jpeg) "流逝.jpeg")
