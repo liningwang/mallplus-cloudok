@@ -8,13 +8,12 @@
 ## 1. 项目介绍
 
 * **技术交流群** [ 195405248 178381694 419078373]
-[文档blog]( http://yjlive.cn:8084/#/)
+
 ![输入图片说明](https://images.gitee.com/uploads/images/2020/0109/102351_cfd0b0c7_134431.png "屏幕截图.png")
-### 关注公众号获取最全部署教程和后台管理的vue前端，以及uniapp生成的h5 小程序和app
+### 关注公众号获取最全部署教程和后台管理的vue前端，以及uniapp生成的h5 小程序和app和演示地址
 
 
 * **演示地址**
-  * url： [http://www.yjlive.cn:8090/#/login](http://www.yjlive.cn:8090/#/login)
   * 账号密码：admin/123456
   * 应用监控账号密码：admin/admin
   * 配置中心账号密码：nacos/nacos
@@ -24,8 +23,7 @@
   * 任务管理账号密码：admin/123456
 * **演示环境有全方位的监控示例：日志系统 + APM系统 + GPE系统**
 
-* Gitee地址：https://gitee.com/catshen/mallcloud-platform
-* Github地址：https://github.com/shenzhuan/mallcloud
+
 
 >   发布页面 http://m3w.cn/mallcloud  
 >   h5地址  http://www.yjlive.cn:8082/#/ 
