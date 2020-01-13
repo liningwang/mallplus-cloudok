@@ -7,7 +7,7 @@
 
 ## 1. 项目介绍
 
-* **技术交流群** [ 320860169  195405248  176736712]
+* **技术交流群** [ 320860169(已满)  195405248(已满)  176736712]
  **加群获取最新的数据库** 
 
 ![输入图片说明](https://images.gitee.com/uploads/images/2020/0109/102351_cfd0b0c7_134431.png "屏幕截图.png")
@@ -41,9 +41,8 @@
 * 引入组件化的思想实现高内聚低耦合，项目代码简洁注释丰富上手容易
 * 注重代码规范，严格控制包依赖，每个工程基本都是最小依赖
 * 非常适合学习和企业中使用
-> cloud框架和组件来源：https://gitee.com/owenwangwen/open-capacity-platform
-https://gitee.com/zlt2000/microservices-platform
-> 业务逻辑来源：https://github.com/shenzhuan/mallplus
+
+> 业务逻辑来源：单体版本 [https://gitee.com/zscat/mallplus](https://gitee.com/zscat/mallplus)
 
 &nbsp;
 
