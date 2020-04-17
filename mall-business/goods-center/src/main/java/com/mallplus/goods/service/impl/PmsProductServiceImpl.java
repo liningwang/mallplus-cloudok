@@ -20,6 +20,7 @@ import com.mallplus.goods.vo.PmsProductParam;
 import com.mallplus.goods.vo.PmsProductResult;
 import com.mallplus.sentinel.config.ConstansValue;
 import com.mallplus.util.DateUtils;
+import com.mallplus.util.ReflectionUtil;
 import io.swagger.annotations.ApiModelProperty;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.BeanUtils;
@@ -32,6 +33,7 @@ import javax.annotation.Resource;
 import java.lang.reflect.Method;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Collection;
 import java.util.Date;
 import java.util.List;
 import java.util.stream.Collectors;
@@ -245,33 +247,32 @@ public class PmsProductServiceImpl extends ServiceImpl<PmsProductMapper, PmsProd
         handleSkuStockCode(productParam.getSkuStockList(), product);
         productMapper.updateById(product);
         //会员价格
-        //  memberPriceMapper.delete(new QueryWrapper<>(new PmsMemberPrice()).eq("product_id",id));
-        //  relateAndInsertList(memberPriceDao, productParam.getMemberPriceList(), id);
+          memberPriceMapper.delete(new QueryWrapper<>(new PmsMemberPrice()).eq("product_id",id));
+          relateAndInsertList(memberPriceDao, productParam.getMemberPriceList(), id);
         //阶梯价格
 
-        //  productLadderMapper.delete(new QueryWrapper<>(new PmsProductLadder()).eq("product_id",id));
-        //  relateAndInsertList(productLadderDao, productParam.getProductLadderList(), id);
+          productLadderMapper.delete(new QueryWrapper<>(new PmsProductLadder()).eq("product_id",id));
+          relateAndInsertList(productLadderDao, productParam.getProductLadderList(), id);
         //满减价格
 
-        //  productFullReductionMapper.delete(new QueryWrapper<>(new PmsProductFullReduction()).eq("product_id",id));
-        // relateAndInsertList(productFullReductionDao, productParam.getProductFullReductionList(), id);
+          productFullReductionMapper.delete(new QueryWrapper<>(new PmsProductFullReduction()).eq("product_id",id));
+         relateAndInsertList(productFullReductionDao, productParam.getProductFullReductionList(), id);
         //修改sku库存信息
 
         skuStockMapper.delete(new QueryWrapper<>(new PmsSkuStock()).eq("product_id",id));
-
-        //  relateAndInsertList(skuStockDao, productParam.getSkuStockList(), id);
+        relateAndInsertList(skuStockDao, productParam.getSkuStockList(), id);
         //修改商品参数,添加自定义商品规格
 
         productAttributeValueMapper.delete(new QueryWrapper<>(new PmsProductAttributeValue()).eq("product_id",id));
-        //  relateAndInsertList(productAttributeValueDao, productParam.getProductAttributeValueList(), id);
+        relateAndInsertList(productAttributeValueDao, productParam.getProductAttributeValueList(), id);
         //关联专题
 
         subjectProductRelationMapper.delete(new QueryWrapper<>(new CmsSubjectProductRelation()).eq("product_id",id));
-        //  relateAndInsertList(subjectProductRelationDao, productParam.getSubjectProductRelationList(), id);
+        relateAndInsertList(subjectProductRelationDao, productParam.getSubjectProductRelationList(), id);
         //关联优选
 
         prefrenceAreaProductRelationMapper.delete(new QueryWrapper<>(new CmsPrefrenceAreaProductRelation()).eq("product_id",id));
-        //  relateAndInsertList(prefrenceAreaProductRelationDao, productParam.getPrefrenceAreaProductRelationList(), id);
+        relateAndInsertList(prefrenceAreaProductRelationDao, productParam.getPrefrenceAreaProductRelationList(), id);
         List<PmsSkuStock> skuStockList = productParam.getSkuStockList();
         for (PmsSkuStock stock : skuStockList) {
             stock.setProductId(id);
@@ -389,8 +390,7 @@ public class PmsProductServiceImpl extends ServiceImpl<PmsProductMapper, PmsProd
                 Method setProductId = item.getClass().getMethod("setProductId", Long.class);
                 setProductId.invoke(item, productId);
             }
-            Method insertList = dao.getClass().getMethod("saveBatch", List.class);
-            insertList.invoke(dao, dataList);
+            ReflectionUtil.invokeMethod(dao,"saveBatch",new Object[]{dataList,1000}, Collection.class,int.class);
         } catch (Exception e) {
             e.printStackTrace();
             log.warn("创建产品出错:{}", e.getMessage());

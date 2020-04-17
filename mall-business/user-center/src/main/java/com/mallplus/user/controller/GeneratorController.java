@@ -39,7 +39,6 @@ public class GeneratorController {
         return new CommonResult().success(list);
     }
 
-    ;
 
 
     @RequestMapping(value = "/code/{tableName}")

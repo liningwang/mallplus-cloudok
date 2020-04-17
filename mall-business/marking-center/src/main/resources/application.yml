@@ -19,7 +19,7 @@ mall:
     title: 营销中心
     description: 营销中心接口文档
     version: 1.0
-    base-package: com.mallplus.sms.controller
+    base-package: com.mallplus.marking.controller
   cache-manager:
     configs:
       - key: menu

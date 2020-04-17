@@ -48,7 +48,7 @@ public class SmsGroupController {
             for (SmsGroup smsGroup : page.getRecords()){
                 calateStatus(smsGroup);
             }
-            return new CommonResult().success();
+            return new CommonResult().success(page);
         } catch (Exception e) {
             log.error("根据条件查询所有列表：%s", e.getMessage(), e);
         }

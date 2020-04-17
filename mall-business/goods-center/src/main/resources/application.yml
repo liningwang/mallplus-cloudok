@@ -4,6 +4,8 @@ spring:
     username: ${mall.datasource.username}
     password: ${mall.datasource.password}
     driver-class-name: com.mysql.jdbc.Driver
+  jackson:
+    date-format: yyyy-MM-dd HH:mm:ss
 
 mybatis-plus:
   mapper-locations: classpath:/mapper/*.xml

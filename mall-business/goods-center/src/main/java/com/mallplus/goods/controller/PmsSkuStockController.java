@@ -36,7 +36,6 @@ public class PmsSkuStockController {
     @SysLog(MODULE = "pms", REMARK = "根据条件查询所有sku的库存列表")
     @ApiOperation("根据条件查询所有sku的库存列表")
     @GetMapping(value = "/list")
-    @PreAuthorize("hasAuthority('pms:PmsSkuStock:read')")
     public Object getPmsSkuStockByPage(PmsSkuStock entity,
                                        @RequestParam(value = "pageNum", defaultValue = "1") Integer pageNum,
                                        @RequestParam(value = "pageSize", defaultValue = "10") Integer pageSize
@@ -108,7 +107,6 @@ public class PmsSkuStockController {
     @SysLog(MODULE = "pms", REMARK = "给sku的库存分配sku的库存")
     @ApiOperation("查询sku的库存明细")
     @GetMapping(value = "/{id}")
-    @PreAuthorize("hasAuthority('pms:PmsSkuStock:read')")
     public Object getPmsSkuStockById(@ApiParam("sku的库存id") @PathVariable Long id) {
         try {
             if (ValidatorUtils.empty(id)) {
@@ -138,7 +136,7 @@ public class PmsSkuStockController {
     }
     @SysLog(MODULE = "pms", REMARK = "根据商品编号及编号模糊搜索sku库存")
     @ApiOperation("根据商品编号及编号模糊搜索sku库存")
-    @RequestMapping(value = "/{pid}", method = RequestMethod.GET)
+    @RequestMapping(value = "/list/{pid}", method = RequestMethod.GET)
     @ResponseBody
     public Object getList(@PathVariable Long pid, @RequestParam(value = "keyword", required = false) String keyword) {
         List<PmsSkuStock> skuStockList = IPmsSkuStockService.getList(pid, keyword);

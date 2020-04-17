@@ -22,7 +22,7 @@ public class SysRoleUser extends BaseEntity implements Serializable {
 
     private static final long serialVersionUID = 1L;
 
-    @TableId("user_id")
+    @TableField("user_id")
     private Long userId;
 
     @TableField("role_id")

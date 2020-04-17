@@ -12,6 +12,7 @@ import com.mallplus.user.mapper.SysRolePermissionMapper;
 import com.mallplus.user.mapper.SysUserMapper;
 import com.mallplus.user.mapper.SysUserRoleMapper;
 import com.mallplus.user.model.SysUserExcel;
+import com.mallplus.user.model.SysUserRole;
 import com.mallplus.user.service.ISysUserRoleService;
 import com.mallplus.user.service.ISysUserService;
 import lombok.extern.slf4j.Slf4j;

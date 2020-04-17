@@ -3,6 +3,7 @@ package com.mallplus.user.service.impl;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import com.mallplus.common.model.SysRoleUser;
 import com.mallplus.user.mapper.SysUserRoleMapper;
+import com.mallplus.user.model.SysUserRole;
 import com.mallplus.user.service.ISysUserRoleService;
 import org.springframework.stereotype.Service;
 

@@ -37,6 +37,9 @@ mall:
         /css/**,
         /images/**,
         /js/**
+#        /webjars/**,
+#        /v2/api-docs,
+#        /swagger-ui.html
     code:
       # 忽略验证码的应用编号
       ignoreClientCode: app

@@ -1,6 +1,7 @@
 package com.mallplus.gateway.config;
 
 import com.didispace.swagger.butler.EnableSwaggerButler;
+import org.slf4j.Logger;
 import org.springframework.context.annotation.Configuration;
 
 /**

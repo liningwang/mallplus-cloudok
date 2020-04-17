@@ -146,7 +146,8 @@ public class PmsProductCategoryController {
     @RequestMapping(value = "/list/withChildren", method = RequestMethod.GET)
     @ResponseBody
     public Object listWithChildren() {
-        List<PmsProductCategoryWithChildrenItem> list = IPmsProductCategoryService.listWithChildren();
+        List<PmsProductCategory> list = IPmsProductCategoryService.list();
+//        List<PmsProductCategoryWithChildrenItem> list = IPmsProductCategoryService.listWithChildren();
         return new CommonResult().success(list);
     }
 

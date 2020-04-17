@@ -12,7 +12,10 @@ mybatis-plus:
   global-config:
     db-config:
       id-type: auto
-
+redis:
+  key:
+    prefix:
+      authCode: admin:authCode
 mall:
   swagger:
     enabled: true

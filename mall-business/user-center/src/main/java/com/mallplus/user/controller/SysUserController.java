@@ -211,22 +211,22 @@ public class SysUserController {
         return new CommonResult().failed();
     }
 
-    @SysLog(MODULE = "sys", REMARK = "给用户分配角色")
-    @ApiOperation("查询用户明细")
-    @GetMapping(value = "/{id}")
-    public Object getUserById(@ApiParam("用户id") @PathVariable Long id) {
-        try {
-            if (ValidatorUtils.empty(id)) {
-                return new CommonResult().paramFailed("用户id");
-            }
-            SysUser coupon = appUserService.getById(id);
-            return new CommonResult().success(coupon);
-        } catch (Exception e) {
-            log.error("查询用户明细：%s", e.getMessage(), e);
-            return new CommonResult().failed();
-        }
-
-    }
+//    @SysLog(MODULE = "sys", REMARK = "给用户分配角色")
+//    @ApiOperation("查询用户明细")
+//    @GetMapping(value = "/{id}")
+//    public Object getUserById(@ApiParam("用户id") @PathVariable Long id) {
+//        try {
+//            if (ValidatorUtils.empty(id)) {
+//                return new CommonResult().paramFailed("用户id");
+//            }
+//            SysUser coupon = appUserService.getById(id);
+//            return new CommonResult().success(coupon);
+//        } catch (Exception e) {
+//            log.error("查询用户明细：%s", e.getMessage(), e);
+//            return new CommonResult().failed();
+//        }
+//
+//    }
 
     @SysLog(MODULE = "sys", REMARK = "获取指定用户的角色")
     @ApiOperation("获取指定用户的角色")

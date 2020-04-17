@@ -2,6 +2,7 @@ package com.mallplus.user.service;
 
 import com.baomidou.mybatisplus.extension.service.IService;
 import com.mallplus.common.model.SysRoleUser;
+import com.mallplus.user.model.SysUserRole;
 
 /**
  * <p>

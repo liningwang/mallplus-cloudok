@@ -34,8 +34,15 @@ mall:
     ignore:
       # 忽略认证的地址
       httpUrls: >
+        /favicon.ico
         /api-uaa/**,
         /api-user/users-anon/**,
+        /api-user/webjars/**,
+        /api-user/v2/api-docs,
+        /api-user/swagger-ui.html,
+        /api-marking/webjars/**,
+        /api-marking/v2/api-docs,
+        /api-marking/swagger-ui.html,
         /login.html,
         /user/login,
         /api/applet/**,
@@ -132,7 +139,7 @@ zuul:
       strip-prefix: true
       custom-sensitive-headers: true
     marking:
-      path: /api-sms/**
+      path: /api-marking/**
       service-id: sms-center
       strip-prefix: true
       custom-sensitive-headers: true
@@ -162,4 +169,4 @@ swagger:
     api-docs-path:  v2/api-docs
     swagger-version: 2.0
     auto-generate-from-zuul-routes: true
-    generate-routes: user,file,goods-center,ums-center,order-center,sms-center,cms-center
+    generate-routes: user,auth,file,marking,goods-center,ums-center,order-center,cms-center

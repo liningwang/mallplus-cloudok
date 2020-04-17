@@ -36,7 +36,7 @@ public class SmsCouponController {
     @SysLog(MODULE = "sms", REMARK = "根据条件查询所有优惠卷表列表")
     @ApiOperation("根据条件查询所有优惠卷表列表")
     @GetMapping(value = "/list")
-    @PreAuthorize("hasAuthority('marking:SmsCoupon:read')")
+//    @PreAuthorize("hasAuthority('marking:SmsCoupon:read')")
     public Object getSmsCouponByPage(SmsCoupon entity,
                                      @RequestParam(value = "pageNum", defaultValue = "1") Integer pageNum,
                                      @RequestParam(value = "pageSize", defaultValue = "10") Integer pageSize

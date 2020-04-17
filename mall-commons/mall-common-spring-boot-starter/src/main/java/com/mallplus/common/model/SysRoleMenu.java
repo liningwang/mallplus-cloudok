@@ -22,7 +22,7 @@ public class SysRoleMenu extends BaseEntity implements Serializable {
 
     private static final long serialVersionUID = 1L;
 
-    @TableId("role_id")
+    @TableField("role_id")
     private Long roleId;
 
     @TableField("menu_id")

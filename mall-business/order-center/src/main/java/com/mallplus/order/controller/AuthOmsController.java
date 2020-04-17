@@ -140,7 +140,13 @@ public class AuthOmsController {
         return null;
     }
 
-
+    @ApiOperation("添加商品到购物车")
+    @RequestMapping(value = "/delete")
+    @ResponseBody
+    public Object deleteCartItem(Long cart_id_list,Long memberId) {
+        return new CommonResult().success(
+                orderService.deleteCartItem(cart_id_list,memberId));
+    }
 
     @ApiOperation("添加商品到购物车")
     @RequestMapping(value = "/addCart")

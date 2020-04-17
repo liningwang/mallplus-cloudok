@@ -29,6 +29,16 @@
 			<groupId>com.mall</groupId>
 			<artifactId>mall-swagger2-spring-boot-starter</artifactId>
 		</dependency>
+		<!--<dependency>-->
+			<!--<groupId>io.springfox</groupId>-->
+			<!--<artifactId>springfox-swagger2</artifactId>-->
+			<!--<version>2.9.2</version>-->
+		<!--</dependency>-->
+		<!--<dependency>-->
+			<!--<groupId>io.springfox</groupId>-->
+			<!--<artifactId>springfox-swagger-ui</artifactId>-->
+			<!--<version>2.9.2</version>-->
+		<!--</dependency>-->
 		<dependency>
 			<groupId>com.mall</groupId>
 			<artifactId>mall-sentinel-spring-boot-starter</artifactId>
@@ -72,6 +82,7 @@
 		<dependency>
 			<groupId>mysql</groupId>
 			<artifactId>mysql-connector-java</artifactId>
+			<version>8.0.15</version>
 		</dependency>
 
 		<!-- hutool java工具类库  -->

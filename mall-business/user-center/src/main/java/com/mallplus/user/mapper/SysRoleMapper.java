@@ -13,6 +13,10 @@ import java.util.Map;
  * 角色
  */
 public interface SysRoleMapper extends BaseMapper<SysRole> {
+    /**
+     * 获取用于所有角色
+     */
+    List<SysRole> getRoleListByUserId(@Param("adminId") Long adminId);
 	List<SysRole> findList(Page<SysRole> page, @Param("r") Map<String, Object> params);
 
     List<SysRole> findRolesByUserId(Long id);

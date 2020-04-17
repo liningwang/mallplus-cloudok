@@ -67,7 +67,7 @@ public class OmsCartItemServiceImpl extends ServiceImpl<OmsCartItemMapper, OmsCa
         OmsCartItem cartItem = new OmsCartItem();
         cartItem.setQuantity(quantity);
         QueryWrapper example = new QueryWrapper();
-        example.eq("deleteStatus", 0);
+        example.eq("delete_status", 0);
         example.eq("member_id", memberId);
 
         return cartItemMapper.update(cartItem, example);

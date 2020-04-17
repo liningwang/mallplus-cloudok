@@ -2,6 +2,7 @@ package com.mallplus.user.mapper;
 
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 import com.mallplus.common.model.SysRoleUser;
+import com.mallplus.user.model.SysUserRole;
 
 /**
  * <p>

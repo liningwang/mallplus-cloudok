@@ -281,23 +281,23 @@ public class NotAuthPmsController {
     @ApiOperation(value = "查询商品类型下的商品列表")
     @GetMapping(value = "/typeGoodsList")
     public Object typeGoodsList(PmsProductCategory productCategory) {
-        PmsProduct productQueryParam = new PmsProduct();
-
-        productQueryParam.setPublishStatus(1);
-        productQueryParam.setVerifyStatus(1);
-        List<PmsProduct> list = pmsProductService.list(new QueryWrapper<>(productQueryParam));
-
+//        PmsProduct productQueryParam = new PmsProduct();
+//
+//        productQueryParam.setPublishStatus(1);
+//        productQueryParam.setVerifyStatus(1);
+//        List<PmsProduct> list = pmsProductService.list(new QueryWrapper<>(productQueryParam));
+//
         List<ProductTypeVo> relList = new ArrayList<>();
-        for (PmsProduct l : list){
-            ProductTypeVo vo = new ProductTypeVo();
-            vo.setGoodsId(l.getId());
-            vo.setId(l.getId());
-            vo.setPic(l.getPic());
-            vo.setName(l.getName());
-            vo.setPrice(l.getPrice());
-            vo.setPid(l.getProductCategoryId());
-            relList.add(vo);
-        }
+//        for (PmsProduct l : list){
+//            ProductTypeVo vo = new ProductTypeVo();
+//            vo.setGoodsId(l.getId());
+//            vo.setId(l.getId());
+//            vo.setPic(l.getPic());
+//            vo.setName(l.getName());
+//            vo.setPrice(l.getPrice());
+//            vo.setPid(l.getProductCategoryId());
+//            relList.add(vo);
+//        }
         List<PmsProductCategory> categories = categoryMapper.selectList(new QueryWrapper<>());
         for (PmsProductCategory v : categories){
             if (v.getParentId()==0){
@@ -309,6 +309,7 @@ public class NotAuthPmsController {
                 ProductTypeVo vo = new ProductTypeVo();
                 vo.setName(v.getName());
                 vo.setId(v.getId());
+                vo.setPic(v.getIcon());
                 vo.setPid(v.getParentId());
                 relList.add(vo);
             }
